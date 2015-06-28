@@ -1,0 +1,50 @@
+<ion-view view-title="">
+    <ion-content>
+        <h1>Dang ki</h1>
+        <form name="regisForm" novalidate="">
+            <div class="item item-input">
+                <div class="input-label">
+                    Ten
+                </div>
+                <input ng-model="user.name" name="name" ng-required="true" type="text"/>
+            </div>
+            <div class="item item-input">
+                <div class="input-label">
+                    Tai khoan(nick chat)
+                </div>
+                <input ng-model="user.nick" name="nick" ng-required="true" type="text" />
+            </div>
+            <div class="item item-input">
+                <div class="input-label">
+                    Mat khau
+                </div>
+                <input ng-model="user.password" name="password" ng-required="true" type="password" />
+            </div>
+            <div class="item item-input">
+                <div class="input-label">
+                    Thanh pho
+                </div>
+                <input ng-model="user.city" name="city" ng-required="true" type="text" />
+            </div>
+            <div class="item item-input">
+                <div class="input-label">
+                    Ngay sinh
+                </div>
+                <input placeholder="ngay" ng-model="user.birthdate" name="birthdate" ng-required="true" size="2" type="number"/>
+                <input placeholder="thang" ng-model="user.birthmonth" name="birthmonth" ng-required="true" size="2" type="number"/>
+                <input placeholder="nam" ng-model="user.birthyear" name="birthyear" ng-required="true" size="4" type="number"/>
+            </div>
+            <div>
+                <p class="item item-input" ng-show="regisForm.name.$error.required">
+                    <span style="color:red;">nhap ten</span>
+                </p>
+                <p class="item item-input" ng-show="regisForm.nick.$error.required"><span style="color:red;">nhap nick (8 ki tu tro len)</span></p>
+                <p class="item item-input" ng-show="regisForm.city.$error.required"><span style="color:red;">nhap ten thanh pho oi ban o</span></p>
+                <p class="item item-input" ng-show="regisForm.birthdate.$error.required || regisForm.birthmonth.$error.required || regisForm.birthyear.$error.required">
+                    <span style="color:red;">nhap ngay sinh</span>
+                </p>
+            </div>
+            <button class="button button-full button-balanced" ng-click="save(user)" ng-disabled="regisForm.$invalid">Tiep tuc</button>
+        </form>
+    </ion-content>
+</ion-view>

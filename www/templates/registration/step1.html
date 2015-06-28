@@ -1,0 +1,29 @@
+<ion-view view-title="Chon ngon ngu">
+  	<ion-content>
+    	<h1>Chon ngon ngu</h1>
+    	<div class="item item-input item-select">
+    		<div class="input-label">
+      			Chon ngon ngu 
+    		</div>
+		    <select ng-model="user.language" ng-init="user.language='vn'">
+		      <option value="vn">Tieng viet</option>
+		      <option value="de">Deutsch</option>
+		      <option value="en">English</option>
+		    </select>
+  		</div>
+  		<div class="item item-input item-select">
+    		<div class="input-label">
+      			Chon quoc gia 
+    		</div>
+		    <select ng-model="user.country" ng-init="user.country='vn'">
+		      <option value="vn">Viet Nam</option>
+		      <option value="de">Duc</option>
+		      <option value="pl">Ba Lan</option>
+		      <option value="cz">Tiep</option>
+		      <option value="ru">Nga</option>
+		      <option value="hu">Hungary</option>
+		    </select>
+  		</div>
+  		<button class="button button-full button-balanced" ng-click="save(user)">Tiep tuc</button>
+  	</ion-content>
+</ion-view>
